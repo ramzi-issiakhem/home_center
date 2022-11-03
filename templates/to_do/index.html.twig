@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Todo List{% endblock %}
+
+{% block body %}
+<ul>
+    {% for key,value in app.session.get('todoList')%}
+        <li> {{ key }} : {{ value }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
